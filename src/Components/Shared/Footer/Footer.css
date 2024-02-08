@@ -1,9 +1,19 @@
-.linkedin{
-    color: #0A66C2;
+.linkedin {
+  color: #0a66c2;
 }
-.facebook{
-    color:#4267B2 ;
+.facebook {
+  color: #4267b2;
 }
-.youtube{
-    color: #FF0000;
+.youtube {
+  color: #ff0000;
+}
+.tasklist-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.normal-footer {
+  position: static;
 }
