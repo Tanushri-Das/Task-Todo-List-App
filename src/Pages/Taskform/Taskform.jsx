@@ -54,7 +54,7 @@ const Taskform = () => {
   };
 
   return (
-    <div className="container my-5">
+    <div className="container my-5 vh-100">
       <div className="row">
         <h3 className="text-black text-center mb-4 fw-bold">Add New Task</h3>
         <div className="col-12 col-md-8 col-lg-6 mx-auto">

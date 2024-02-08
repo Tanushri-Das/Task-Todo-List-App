@@ -73,16 +73,17 @@ const TaskList = () => {
   const completedTasksCount = tasks.filter(
     (task) => task.status === "completed"
   ).length;
+
   return (
-    <div className="container my-5">
+    <div className="container my-5 vh-100">
       <h2 className="mb-4 text-center">All Tasks</h2>
       <div className="mb-4 text-center">
-        <p className="fs-5 fw-semibold">Total Tasks : {totalTasksCount}</p>{" "}
+        <p className="fs-5 fw-semibold">Total Tasks : {totalTasksCount}</p>
         <p className="fs-5 fw-semibold">
           Completed Tasks : {completedTasksCount}
         </p>
       </div>
-      <div className="col-12 col-md-8 col-lg-6 mx-auto mb-4">
+      <div className="col-12 col-md-8 col-lg-6 mx-auto mb-5">
         <Form.Select
           value={filterPriority}
           onChange={(e) => setFilterPriority(e.target.value)}
