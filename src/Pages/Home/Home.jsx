@@ -139,7 +139,7 @@ const Home = () => {
               </div>
             </div>
             <div className="d-flex justify-content-center mt-4">
-              <Button type="submit" variant="success">
+              <Button type="submit" className="fw-semibold" variant="success">
                 Add Task
               </Button>
             </div>

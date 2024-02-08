@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 import EditTaskModal from "./EditTaskModal";
-import toast from "react-hot-toast";
+import "./TaskList.css";
 
 const AllTasks = () => {
   const [tasks, setTasks] = useState([]);
@@ -111,9 +111,10 @@ const AllTasks = () => {
               >
                 {task.priority}
               </td>
-              <td className="text-center fw-semibold data">
+              <td className="text-center fw-semibold">
                 <Button
                   variant="success"
+                  className="data fw-semibold"
                   onClick={() => handleMarkCompleted(task)}
                 >
                   Mark as Completed
@@ -121,14 +122,14 @@ const AllTasks = () => {
                 <Button
                   variant="warning"
                   onClick={() => handleEditTask(task)}
-                  className="ms-2 my-2 my-lg-0"
+                  className="ms-2 my-2 my-lg-0 data fw-semibold text-white"
                 >
                   Edit
                 </Button>
                 <Button
                   variant="danger"
                   onClick={() => handleDeleteTask(task)}
-                  className="ms-2"
+                  className="ms-2 data fw-semibold"
                 >
                   Delete
                 </Button>

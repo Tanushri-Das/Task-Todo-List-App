@@ -1,17 +1,24 @@
-import React from 'react';
-import { Modal, Form, Button } from 'react-bootstrap';
+import { Modal, Form, Button } from "react-bootstrap";
+import "./TaskList.css";
 
-const EditTaskModal = ({ showModal, setShowModal, updatedTask, setUpdatedTask, handleUpdateTask }) => {
+const EditTaskModal = ({
+  showModal,
+  setShowModal,
+  updatedTask,
+  setUpdatedTask,
+  handleUpdateTask,
+}) => {
   return (
     <Modal show={showModal} onHide={() => setShowModal(false)}>
       <Modal.Header closeButton>
-        <Modal.Title>Edit Task</Modal.Title>
+        <Modal.Title className="fw-bold">Edit Task</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
-          <Form.Group className="mb-3" controlId="title">
-            <Form.Label>Title</Form.Label>
+          <Form.Group className="mb-1" controlId="title">
+            <Form.Label className="fs-5 fw-semibold">Title</Form.Label>
             <Form.Control
+              className="modal-data fw-medium"
               type="text"
               value={updatedTask.title}
               onChange={(e) =>
@@ -19,10 +26,11 @@ const EditTaskModal = ({ showModal, setShowModal, updatedTask, setUpdatedTask, h
               }
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="description">
-            <Form.Label>Description</Form.Label>
+          <Form.Group className="mb-1" controlId="description">
+            <Form.Label className="fs-5 fw-semibold">Description</Form.Label>
             <Form.Control
               as="textarea"
+              className="modal-data fw-medium"
               rows={3}
               value={updatedTask.description}
               onChange={(e) =>
@@ -30,31 +38,33 @@ const EditTaskModal = ({ showModal, setShowModal, updatedTask, setUpdatedTask, h
               }
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="status">
-            <Form.Label>Status</Form.Label>
+          <Form.Group className="mb-1" controlId="status">
+            <Form.Label className="fs-5 fw-semibold">Status</Form.Label>
             <Form.Control
               as="select"
+              className="modal-data fw-medium"
               value={updatedTask.status}
               onChange={(e) =>
                 setUpdatedTask({ ...updatedTask, status: e.target.value })
               }
             >
-              <option value="completed">Completed</option>
-              <option value="incomplete">Incomplete</option>
+              <option value="completed" className="modal-data fw-medium">Completed</option>
+              <option value="incomplete" className="modal-data fw-medium">Incomplete</option>
             </Form.Control>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="priority">
-            <Form.Label>Priority</Form.Label>
+          <Form.Group className="mb-1" controlId="priority">
+            <Form.Label className="fs-5 fw-semibold">Priority</Form.Label>
             <Form.Control
               as="select"
+              className="modal-data fw-medium"
               value={updatedTask.priority}
               onChange={(e) =>
                 setUpdatedTask({ ...updatedTask, priority: e.target.value })
               }
             >
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
+              <option value="low" className="modal-data">Low</option>
+              <option value="medium" className="modal-data">Medium</option>
+              <option value="high" className="modal-data">High</option>
             </Form.Control>
           </Form.Group>
         </Form>
@@ -63,7 +73,7 @@ const EditTaskModal = ({ showModal, setShowModal, updatedTask, setUpdatedTask, h
         <Button variant="secondary" onClick={() => setShowModal(false)}>
           Close
         </Button>
-        <Button variant="primary" onClick={handleUpdateTask}>
+        <Button variant="success" onClick={handleUpdateTask}>
           Update
         </Button>
       </Modal.Footer>

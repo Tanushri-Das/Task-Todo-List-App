@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
-import AllTasks from "../Pages/AllTasks/AllTasks";
 import About from "../Pages/About/About";
+import AllTasks from "../Pages/AllTasks/AllTasks";
 
 const routes = createBrowserRouter([
   {
