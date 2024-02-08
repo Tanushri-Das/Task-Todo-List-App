@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="row justify-content-center align-items-center">
           <div className="col-md-6 text-center text-md-start">
-          <h5 className="fs-5">
+            <h5 className="fs-5">
               &copy; {date} - All rights reserved by Tanushri Das
             </h5>
           </div>
