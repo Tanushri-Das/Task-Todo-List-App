@@ -135,7 +135,7 @@ const Home = () => {
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
     toast.success("User created successfully!");
     // Navigate to the all tasks page
-    // navigate("/alltasks");
+    navigate("/alltasks");
 
     // Reset form fields
     setNewTask({
