@@ -20,7 +20,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg bg-white shadow-sm py-2">
       <div className="container">
         <Link to="/" className="navbar-brand fs-2 fw-semibold">
-          TeuxDeux
+          Taskify
         </Link>
         <button
           className="navbar-toggler"

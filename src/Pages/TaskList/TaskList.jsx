@@ -77,7 +77,7 @@ const TaskList = () => {
   return (
     <div className="container my-5 vh-100">
       <h2 className="mb-4 text-center">All Tasks</h2>
-      <div className="mb-4 text-center">
+      <div className="mb-5 text-center">
         <p className="fs-5 fw-semibold">Total Tasks : {totalTasksCount}</p>
         <p className="fs-5 fw-semibold">
           Completed Tasks : {completedTasksCount}
@@ -87,7 +87,7 @@ const TaskList = () => {
         <Form.Select
           value={filterPriority}
           onChange={(e) => setFilterPriority(e.target.value)}
-          className="mb-4 fw-semibold fs-6"
+          className="mb-4 fw-semibold fs-5"
         >
           <option value="all">All Priorities</option>
           <option value="low">Low Priority</option>
