@@ -36,7 +36,7 @@ const Taskform = () => {
 
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
 
-    navigate("/alltasks");
+    navigate("/tasklist");
 
     setNewTask({
       title: "",

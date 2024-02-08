@@ -18,7 +18,7 @@ const routes = createBrowserRouter([
         element: <Taskform />,
       },
       {
-        path: "/alltasks",
+        path: "/tasklist",
         element: <AllTasks />,
       }
     ],

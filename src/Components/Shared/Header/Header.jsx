@@ -67,13 +67,13 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <Link
-                to="/alltasks"
+                to="/tasklist"
                 className={`nav-link fs-4 ${
-                  location.pathname === "/alltasks" ? "active" : ""
+                  location.pathname === "/tasklist" ? "active" : ""
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {location.pathname === "/alltasks" ? (
+                {location.pathname === "/tasklist" ? (
                   <strong className="fs-4">Tasklist</strong>
                 ) : (
                   "Tasklist"

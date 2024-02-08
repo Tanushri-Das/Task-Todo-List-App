@@ -6,7 +6,7 @@ import "./Footer.css";
 const Footer = () => {
   const date = new Date().getFullYear();
   const location = useLocation();
-  const isAllTasks = location.pathname === "/alltasks";
+  const isAllTasks = location.pathname === "/tasklist";
 
   return (
     <footer
