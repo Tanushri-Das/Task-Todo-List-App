@@ -13,14 +13,3 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-.low-priority {
-  color: orange;
-}
-
-.medium-priority {
-  color: green;
-}
-
-.high-priority {
-  color: red;
-}
