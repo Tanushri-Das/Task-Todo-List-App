@@ -1,11 +1,20 @@
 import React from "react";
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
   const date = new Date().getFullYear();
+  const location = useLocation();
+  const isAbout = location.pathname === "/about";
+  const isAllTasks = location.pathname === "/alltasks";
+
   return (
-    <footer className="bg-light py-4 d-flex justify-content-center align-items-center">
+    <footer
+      className={`bg-light py-4 d-flex justify-content-center align-items-center ${
+        isAbout || isAllTasks ? "fixed-bottom" : ""
+      }`}
+    >
       <div className="container">
         <div className="row justify-content-center align-items-center">
           <div className="col-md-6 text-center text-md-start">

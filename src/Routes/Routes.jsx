@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import AllTasks from "../Pages/AllTasks/AllTasks";
+import Taskform from "../Pages/Taskform/Taskform";
 
 const routes = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/taskform",
+        element: <Taskform />,
       },
       {
         path: "/alltasks",

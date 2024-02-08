@@ -42,14 +42,12 @@ const AllTasks = () => {
     );
     setTasks(updatedTasks);
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
-    toast.success("Task marked as completed!");
   };
 
   const handleDeleteTask = (task) => {
     const updatedTasks = tasks.filter((t) => t !== task);
     setTasks(updatedTasks);
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
-    toast.error("Deleted task successfully!");
   };
 
   const filteredTasks =
@@ -111,7 +109,7 @@ const AllTasks = () => {
               >
                 {task.priority}
               </td>
-              <td className="text-center fw-semibold">
+              <td className="text-center fw-semibold d-flex justify-content-center align-items-center">
                 <Button
                   variant="success"
                   className="data fw-semibold"
@@ -122,7 +120,7 @@ const AllTasks = () => {
                 <Button
                   variant="warning"
                   onClick={() => handleEditTask(task)}
-                  className="ms-2 my-2 my-lg-0 data fw-semibold text-white"
+                  className="ms-2 data fw-semibold text-white"
                 >
                   Edit
                 </Button>
