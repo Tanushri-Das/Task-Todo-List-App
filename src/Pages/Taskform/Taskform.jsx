@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import "./Taskform.css";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Taskform = () => {
   const navigate = useNavigate();
@@ -43,6 +44,13 @@ const Taskform = () => {
       status: "",
       priority: "",
     });
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Task Added successfully",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   return (
@@ -82,10 +90,10 @@ const Taskform = () => {
                   <input
                     type="radio"
                     name="status"
-                    value="completed"
+                    value="incomplete"
                     onChange={handleChange}
                   />
-                  <span className="ms-1 fw-medium">Completed</span>
+                  <span className="ms-1 fw-medium">Incomplete</span>
                 </label>
               </div>
               <div>
@@ -93,10 +101,10 @@ const Taskform = () => {
                   <input
                     type="radio"
                     name="status"
-                    value="incomplete"
+                    value="completed"
                     onChange={handleChange}
                   />
-                  <span className="ms-1 fw-medium">Incomplete</span>
+                  <span className="ms-1 fw-medium">Completed</span>
                 </label>
               </div>
             </div>

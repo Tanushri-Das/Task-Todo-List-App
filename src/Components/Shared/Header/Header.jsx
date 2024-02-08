@@ -52,16 +52,31 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <Link
-                to="/about"
+                to="/taskform"
                 className={`nav-link fs-4 ${
-                  location.pathname === "/about" ? "active" : ""
+                  location.pathname === "/taskform" ? "active" : ""
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {location.pathname === "/about" ? (
-                  <strong className="fs-4">About</strong>
+                {location.pathname === "/taskform" ? (
+                  <strong className="fs-4">Taskform</strong>
                 ) : (
-                  "About"
+                  "Taskform"
+                )}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/alltasks"
+                className={`nav-link fs-4 ${
+                  location.pathname === "/alltasks" ? "active" : ""
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {location.pathname === "/alltasks" ? (
+                  <strong className="fs-4">Tasklist</strong>
+                ) : (
+                  "Tasklist"
                 )}
               </Link>
             </li>

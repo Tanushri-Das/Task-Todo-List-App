@@ -3,8 +3,9 @@ import { Button, Form } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 import EditTaskModal from "./EditTaskModal";
 import "./TaskList.css";
+import Swal from "sweetalert2";
 
-const AllTasks = () => {
+const TaskList = () => {
   const [tasks, setTasks] = useState([]);
   const [selectedTask, setSelectedTask] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -34,6 +35,13 @@ const AllTasks = () => {
     setTasks(updatedTasks);
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
     setShowModal(false);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Task Edited successfully",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   const handleMarkCompleted = (task) => {
@@ -48,6 +56,13 @@ const AllTasks = () => {
     const updatedTasks = tasks.filter((t) => t !== task);
     setTasks(updatedTasks);
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Task Deleted successfully",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   const filteredTasks =
@@ -97,9 +112,11 @@ const AllTasks = () => {
               <td className="text-center fw-semibold data">
                 {task.description}
               </td>
-              <td className="text-center fw-semibold data">{task.status}</td>
+              <td className="text-center fw-semibold data text-capitalize">
+                {task.status}
+              </td>
               <td
-                className={`text-center fw-semibold data ${
+                className={`text-center fw-semibold data text-capitalize ${
                   task.priority === "low"
                     ? "text-warning"
                     : task.priority === "medium"
@@ -147,4 +164,4 @@ const AllTasks = () => {
   );
 };
 
-export default AllTasks;
+export default TaskList;
