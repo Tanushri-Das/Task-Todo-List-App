@@ -6,13 +6,12 @@ import "./Footer.css";
 const Footer = () => {
   const date = new Date().getFullYear();
   const location = useLocation();
-  const isAbout = location.pathname === "/about";
   const isAllTasks = location.pathname === "/alltasks";
 
   return (
     <footer
       className={`bg-light py-4 d-flex justify-content-center align-items-center ${
-        isAbout || isAllTasks ? "fixed-bottom" : ""
+        isAllTasks ? "fixed-bottom" : ""
       }`}
     >
       <div className="container">

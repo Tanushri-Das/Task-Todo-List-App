@@ -67,7 +67,7 @@ const AllTasks = () => {
           Completed Tasks : {completedTasksCount}
         </p>
       </div>
-      <div className="col-12 col-md-8 col-lg-6 mx-auto">
+      <div className="col-12 col-md-8 col-lg-6 mx-auto mb-4">
         <Form.Select
           value={filterPriority}
           onChange={(e) => setFilterPriority(e.target.value)}
